@@ -47,6 +47,29 @@
       ]
     },
     {
+      "name": "arrow-functional-s",
+      "description": "Generates a functional react component in shared components with arrow function",
+      "usage": "functional-s [component-name]",
+      "files": [
+        {
+          "blueprint-path": "config/blueprints/functional-component-arrow.ejs",
+          "target-path": "client/components/<%= helpers.capitalize(name) %>-arrow.js"
+        }
+      ]
+    },
+    {
+      "name": "arrow-functional-m",
+      "description": "Generates a functional react component with arrow function in a module directory",
+      "usage": "functional-m <module-name>/<component-name>",
+      "files": [
+        {
+          "blueprint-path": "config/blueprints/functional-component-arrow.ejs",
+          "parent-path": "client/modules/<%= helpers.capitalize(parent) %>",
+          "target-path": "components/<%= helpers.capitalize(name) %>/<%= helpers.capitalize(name) %>-arrow.js"
+        }
+      ]
+    },
+    {
       "name": "module",
       "description": "Generates a module including react components, reducer, action, style & express route, controller, model",
       "usage": "module [module-name]",
